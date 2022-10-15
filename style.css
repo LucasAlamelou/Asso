@@ -1,0 +1,382 @@
+:root{
+    --backcolor :#F4EBD6; 
+    --texte :#1B9476;
+    --titreH1: #124660;
+    --titreH2:#1B9476;
+}
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+html{
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+}
+html, body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+    min-height: 100%;
+    width: 100%;
+}
+p{
+    color: var(--texte);
+}
+
+/*--- Header ---*/
+
+#header{
+    display: flex;
+    flex-direction: column;
+    background-image: url(/img/pexels-eberhard-grossgasteiger-2437296.jpg);
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+
+}
+h1{
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--titreH1);
+    position: absolute;
+    margin-top: 5rem;
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+}
+@keyframes wipe-enter {
+	0% {
+		transform: scale(0, .050);
+	}
+	50% {
+		transform: scale(1, .050);
+	}
+}
+@keyframes link-enter {
+    0% {
+        transform: translateX(-700px);
+    }
+    60% {
+        transform: translateX(0);
+    }
+}
+@media (prefers-reduced-motion: no-preference) {
+    h1{
+      animation-name: wipe-enter;
+      animation-duration: 2s;
+      animation-iteration-count: 1;
+      animation-delay: 0.5s;
+    }
+    .description{
+        animation-name: wipe-enter;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+        animation-delay: 0.5s;
+    }
+    #link-event{
+        animation-name: link-enter;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+        animation-delay: 0.5s;
+    }
+  }
+.list-header{
+    display: none;
+    justify-content: center;
+    margin-top: 0.7rem;
+}
+.list-header > li {
+    padding: 10px;
+}
+.list-header > li > a{
+    color: var(--texte);
+}
+.description{
+    position: absolute;
+    margin-top: 78vh;
+    color:var(--texte);
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+}
+#link-event{
+    position: absolute;
+    margin-top: 90vh;
+    font-size: 1.1rem;
+    background-color: var(--texte);
+    color: white;
+    padding: 10px;
+    border-radius: 15px;
+    margin-left: 30px;
+}
+#link-event:hover{
+    /*animation: ease-in 1s infinite link;*/
+    cursor: pointer;
+}
+#link-event:visited{
+    color: white;
+}
+@keyframes link {
+    0% {
+        
+    }
+    50% {
+        width: 110% ;
+    }
+    100%{
+        width: 100%;
+    }
+    
+}
+
+/*--- Main de 4 cartes ---*/
+#main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:  var(--backcolor);
+}
+.head-card{
+    font-weight: 700;
+    margin-top: 0px;
+    color: var(--texte);
+    height: 50px;
+    width: 100%;
+}
+.head-card > p {
+    padding: 20px;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+/*--- Card ---*/
+.card{
+    box-shadow: 0 4px 8px 0 rgba(14, 1, 1, 0.821);
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 85vw;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 20px;
+}
+.card:hover{
+    box-shadow: 0 8px 20px 0 #705f0a;
+    cursor: pointer;
+}
+.container {
+    margin-top: 10px;
+    padding: 2px 16px;
+    color: var(--texte);
+}
+.container > h4 {
+    margin-top: 10px;
+    font-weight: 700;
+}
+.container > p {
+    margin-top: 10px;
+    color:var(--texte);
+}
+
+/*--- About ---*/
+.about-us{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin-top: 5px;
+    color: var(--texte);
+}
+.about-us > h4 { 
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding: 5px;
+    color: var(--titreH2);
+}
+.about-us > p {
+    font-size: 1.2rem;
+    padding: 5px;
+    color: var(--texte);
+}
+
+/*--- Lien ---*/
+.join-us{
+    padding: 10px;
+    font-size: 1.3rem;
+    color: var(--texte);
+    border-radius: 10px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/*--- Footer ---*/
+#footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-size: 0.9rem;
+    background-color: var(--backcolor);
+}
+
+/*--- Page event ---*/
+@keyframes welcome {
+	0% {
+		filter: blur(100px);
+	}
+	50% {
+		filter: blur(15px);
+	}
+    100% {
+        filter: blur(0px);
+    }
+}
+h2 {
+    position: absolute;
+    margin-top: 55vh;
+    color: var(--titreH2);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+}
+
+.description-evenement{
+    position: absolute;
+    margin-top: 60vh;
+    color: var(--texte);
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+}
+@keyframes link-animation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@media (prefers-reduced-motion: no-preference) {
+    #link-subscribe{
+      animation-name: link-animation;
+      animation-duration: 1s;
+      animation-iteration-count:infinite;
+      animation-delay: 4s;
+    }
+    #header{
+        animation-name: welcome;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+    }
+}
+#link-subscribe{
+    position: absolute;
+    margin-top: 85vh;
+    font-size: 1.1rem;
+    background-color: var(--texte);
+    color: white;
+    padding: 10px;
+    border-radius: 15px;
+    margin-left: 150px;
+
+}
+#link-subscribe:hover{
+    cursor: pointer;
+}
+
+/*---Media Queries 760px Tablette---*/
+@media screen and (min-width: 760px) {
+    .list-header{
+        display: flex;
+        margin-top: 150px;
+    }
+    h1{
+        font-size: 2.9rem;
+    }
+    .description{
+        font-size: 1.8rem;
+        margin-top: 70vh;
+        backdrop-filter: blur(10px);
+    }
+    #link-event{
+        margin: 90vh 210px;
+    }
+    #main{
+        flex: 3 0px;
+        flex-wrap: wrap;
+    }
+    .all-card{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 5px;
+    }
+    .card{
+        width: 40vw;
+    }
+}
+
+/*---Media Queries 1024px Ordinateur---*/
+
+@media screen and (min-width: 1024px){
+    #header{
+        background-size: 100vw auto;
+        background-repeat: no-repeat;
+        
+    }
+    #link-event{
+        margin: 80vh;
+        margin-left: 40%;
+        width: max-content;
+        font-size: 1rem;
+    }
+    .description{
+        margin-top: 60vh;
+        font-size: 1.3rem;
+    }
+    .all-card{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 25px;
+        margin-bottom: 20px;
+    }
+    .card{
+        width: 20vw;
+    }
+    h2{
+        margin-top: 45vh;
+    }
+    .description-evenement{
+        margin-top: 50vh;
+        margin-left: 150px;
+        width: 80vw;
+    }
+    #link-subscribe{
+        margin-left: 47%;
+    }
+    .github{
+        width: 50px;
+    }
+}
